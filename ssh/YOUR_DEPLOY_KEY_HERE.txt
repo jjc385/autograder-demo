@@ -1,0 +1,6 @@
+Make sure to add your deploy key here.
+
+If you name your key something other than "deploy_key", make sure to update
+the name in setup.sh
+
+It's most likely best not to check your key into version control.
