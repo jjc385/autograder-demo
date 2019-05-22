@@ -10,4 +10,4 @@ cd /autograder/source
 source update.sh
 
 ## Run tests and save output
-python run_tests.py > /autograder/results/results.json
+python3 run_tests.py > /autograder/results/results.json
