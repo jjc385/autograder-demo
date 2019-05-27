@@ -8,6 +8,8 @@ cd /autograder/source
 #       the already-configured remote, so that `git pull` works correctly
 # * The remote must have an ssh url (e.g., git@github.com:<username>/<repo>),
 #       not an http url (e.g., http://www.github.com/<username>/<repo>)
+## First do a hard reset to avoid line ending issues
+git reset --hard
 git pull
 
 ## Install (updated) python requirements
