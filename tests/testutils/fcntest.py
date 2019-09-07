@@ -52,18 +52,16 @@ class FcnTest :
         setattr(unittestCls, testFcn.__name__, testFcn)
 
     def toTestFcn( self ) :
-        testFcn = self.toTestFcnBase()
-        testFcn = partial_credit(self.maxScore)(testFcn)
-        testFcn.__name__ = self.testName()
-        return testFcn
 
-    def toTestFcnBase(self) :
+        @partial_credit(self.maxScore)
         def testFcn(testCaseSelf, set_score=None) : 
             def tempTestFcn() :
                 self.toInnerTestFcn(testCaseSelf)
             testCaseSelf.runTestFcn(tempTestFcn, self.timeLimit, process=True)
             score = testCaseSelf.getScore(self.maxScore, self.maxIntScore())
             set_score(score)
+
+        testFcn.__name__ = self.testName()
         return testFcn
 
     def toInnerTestFcn(self, testCaseSelf) :
