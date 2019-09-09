@@ -1,0 +1,9 @@
+services:
+    - docker
+
+before_install:
+    - docker build -t autograder -f metatests/Dockerfile .
+
+script:
+    - python3 -m unittest discover -s metatests
+    - docker run autograder /bin/sh -c "chmod +x source/metatests/integration.sh && ./source/metatests/integration.sh"
