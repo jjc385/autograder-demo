@@ -1,0 +1,10 @@
+services:
+    - docker
+
+script:
+    - docker build -t py3-base -f docker-py3autograder/Dockerfile .
+
+after_success:
+    - docker tag py3-base jjc385/py3autograder:latest
+    - docker login -u jjc385 -p $DOCKER_PASSWORD
+    - docker push jjc385/py3autograder:latest
