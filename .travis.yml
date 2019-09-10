@@ -1,3 +1,4 @@
+language: python # python3 is the default as of mid 2019
 services:
     - docker
 
@@ -6,4 +7,4 @@ before_install:
 
 script:
     - python3 -m unittest discover -s metatests
-    - docker run autograder /bin/sh -c "chmod +x source/metatests/integration.sh && ./source/metatests/integration.sh"
+    - docker run autograder /bin/sh -c "chmod +x source/metatests/integration_test.sh && ./source/metatests/integration_test.sh"
