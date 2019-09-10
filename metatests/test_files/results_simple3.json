@@ -1,0 +1,17 @@
+{
+    "tests": [
+        {
+            "name": "Test existence of sample_report.ipynb",
+            "score": 0.01,
+            "max_score": 0.01
+        },
+        {
+            "name": "Test existence of sample_module.py",
+            "score": 0.00,
+            "max_score": 0.01
+        }
+    ],
+    "leaderboard": [],
+	"execution_time": "0.00",
+    "score": 0.01
+}
