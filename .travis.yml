@@ -1,4 +1,5 @@
 language: # No language needed, as python is already installed in the autograder docker image
+
 services:
     - docker
 
@@ -7,4 +8,4 @@ before_install:
 
 script:
     - docker run autograder /bin/sh -c "cd /autograder/source && python3 -m unittest discover -v -s metatests"
-    - docker run autograder /bin/sh -c "chmod +x source/metatests/integration_test.sh && ./source/metatests/integration_test.sh"
+    - chmod +x metatests/dispatch_integration_tests.sh && ./metatests/dispatch_integration_tests.sh

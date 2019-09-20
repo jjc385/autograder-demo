@@ -8,12 +8,12 @@
         },
         {
             "name": "test_file_existence_1_sample_report_ipynb (test_file_existence.TestFileExistence)",
-            "score": 0.01,
+            "score": 0.00,
             "max_score": 0.01,
-            "output": "File \"sample_report.ipynb\" exists in your submission\n\n"
+            "output": "WARNING\n\nFile \"sample_report.ipynb\" DOES NOT exist in your submission\n\nTest Failed: False is not true\n"
         }
     ],
     "leaderboard": [],
     "execution_time": "0.00",
-    "score": 0.02
+    "score": 0.01
 }

@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 
-## Set up autograder files
-cp /autograder/submission/sample_module.py /autograder/source/sample_module.py
-cp /autograder/submission/sample_report.ipynb /autograder/source/sample_report.ipynb
-
 cd /autograder/source
 
 ## Pull updates from git
 source update.sh
+
+## Copy required files from submission directory to testing directory
+python3 copy_files.py
 
 ## Run tests and save output
 python3 run_tests.py > /autograder/results/results.json
