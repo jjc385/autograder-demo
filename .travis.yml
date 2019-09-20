@@ -1,4 +1,4 @@
-language: python # python3 is the default as of mid 2019
+language: # No language needed, as python is already installed in the autograder docker image
 services:
     - docker
 
