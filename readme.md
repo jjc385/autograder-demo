@@ -244,8 +244,9 @@ What the student sees:
 First, see Gradescope's [autograder documentation][gs-autograder-docs],
 which explains how to use and customize the autograder.
 
-Then clone this repository and modify the `tests` directory acording to your
+Then clone this repository and add to the `tests` directory acording to your
 needs.
+Any files of the form `tests/test*.py` will be searched for unit tests.
 
 This entire project directory is intended to be zipped and uploaded to
 gradescope, during the "Autograder Configuration" step.
