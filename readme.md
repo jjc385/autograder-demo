@@ -2,7 +2,8 @@
 
 ## About this project
 
-I created this repository to rebuild and document the enhancements 
+I (Jared Claypooole) created this repository 
+to rebuild and document the enhancements 
 I made to [Gradescope][gradescope.com]'s 
 example [python autograder][gs-py-autograder] implemenation.
 See also Gradescope's [autograder documentation][gs-autograder-docs].
