@@ -88,7 +88,9 @@ Notes:
 
 * This type of enhancement was explicitly
   [suggested][gs-docs-pull-from-git]
-  in the Gradescope's autograder docs.
+  in the Gradescope's autograder docs,
+  and my code is partially based on their
+  [example code][gs-gh-pull-from-git-ex].
 * The update process is performed
   not only just before the autograder is run on a student's submission,
   but also just after
@@ -135,6 +137,7 @@ silent or unexpected ways.
 
 
 [gs-docs-pull-from-git]: https://gradescope-autograders.readthedocs.io/en/latest/git_pull/
+[gs-gh-pull-from-git-ex]: https://github.com/gradescope/autograder_samples/tree/master/deploy_keys
 [issue-2]: https://github.com/jjc385/autograder-demo/issues/2
 
 
