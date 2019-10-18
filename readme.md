@@ -34,9 +34,9 @@ project:
 * Write cleaner code that's easier to read and maintain
 * Use automated (meta) tests to unit test the code
 * Employ integration tests (in a Docker container) to simulate Gradescope's
-	use of the autograder and make sure everything is working properly
+  use of the autograder and make sure everything is working properly
 * Simulate a review process by reviewing github pull requests
-	and addressing issues identified there
+  and addressing issues identified there
 * Include better project and code documentation for ease of use
 
 ## Project progress
@@ -87,18 +87,18 @@ to pull any such updates.
 Notes:
 
 * This type of enhancement was explicitly 
-[suggested][gs-docs-pull-from-git]
-in the Gradescope's autograder docs.
+  [suggested][gs-docs-pull-from-git]
+  in the Gradescope's autograder docs.
 * The update process is performed 
-not only just before the autograder is run on a student's submission,
-but also just after 
-the autograder is uploaded to Gradescope -- when `setup.sh` is run
+  not only just before the autograder is run on a student's submission,
+  but also just after 
+  the autograder is uploaded to Gradescope -- when `setup.sh` is run
 * The autograder runs `git reset --hard` before doing this,
-which is a workaround for Windows users.  This means that any changes to the
-autograder *must* be committed (using `git commit`) before being uploaded
-(see [issue \#2][issue-2])
+  which is a workaround for Windows users.  This means that any changes to the
+  autograder *must* be committed (using `git commit`) before being uploaded
+  (see [issue \#2][issue-2])
   * Once can disable this reset by removing or commenting out 
-  the `git reset --hard` line from `update.sh`
+    the `git reset --hard` line from `update.sh`
 
 
 Inner workings:
