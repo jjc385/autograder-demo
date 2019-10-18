@@ -152,12 +152,17 @@ This enhancement allows the user to simply list all files that are required in
 `required-files.txt`, and then the autograder automatically copies them over
 and verifies their existence, with feedback for students.
 
+Inner workings:
+
 * A "required file" is any filename listed in `required-files.txt`
-* Check that the required files exist
-  (through `tests/test_file_existence.py`),
-  providing feedback to students if they do not
-* Automatically copy required files
-  from `\autograder\submission` to `\autograder\tests`
+* A series of unit tests within `tests/test_file_existence.py`
+  check that each required file exists
+  * If a file doesn't exist in a students' submission,
+    the Gradescope web interface will show this to the student as a failed test
+* Before unit tests are run on a student's submission,
+  required files are automatically copied
+  from `\autograder\submission` to `\autograder\tests`,
+  using the `copy_files.py` script
 
 
 ### time-limited
