@@ -53,7 +53,7 @@ My original modifications included 5 major changes:
   * Automate scanning a matrix of parameters in tests, particularly for numerical functions
 * correct-with-git
   * Create a framework for grader to incrementally correct students' code using git,
-	preventing minor mistakes from disproportionately affecting grades
+    preventing minor mistakes from disproportionately affecting grades
 
 So far, the first two changes have been merged into this project,
 and the remaining are in development
@@ -107,26 +107,26 @@ Inner workings:
 * The `.git` directory retains its settings from before the project directory
   is zipped and uploaded to Gradescope during the "configure autograder" step
   * Relevant settings are current branch, that branch's upstream remote, and
-	that remote repository's url
+    that remote repository's url
 * The autograder will only check for updates in a remote repository that is set
   as the "upstream" for the current branch
   * This is most easily done by adding the `-u` flag to a typical `git push`
-	command -- e.g., `git push -u <remote-name> <branch-name>`
+    command -- e.g., `git push -u <remote-name> <branch-name>`
   * See also `git branch --set-upsteam`
 * The autograder needs read-access to the remote repository
   in order to fetch updates
   * Assuming your remote repo isn't public
     (or else students could get explicit access to your tests),
-	you probably want to authenticate with an SSH key.
-	For a repository on Github,
-	this can either be a "deploy key" or a "machine key"
+    you probably want to authenticate with an SSH key.
+    For a repository on Github,
+    this can either be a "deploy key" or a "machine key"
   * Make sure you've set up your remote repo with an ssh url rather than an
-	http one
-	* You can verify this by running `git remote -v` and verifying that your
-	  remote has a url which looks like
-	  `git@github.com:<username>/<repo-name>.git`
-	  rather than
-	  `https://github.com/<username>/<repo-name>.git`
+    http one
+    * You can verify this by running `git remote -v` and verifying that your
+      remote has a url which looks like
+      `git@github.com:<username>/<repo-name>.git`
+      rather than
+      `https://github.com/<username>/<repo-name>.git`
 
 Again, this enhancement works best when all changes you've made before zipping
 and uploading to the "create autograder" page are committed, and pushed to the
@@ -200,10 +200,10 @@ and pulling any changes that might have been made by the grader on the remote.
 * Push to the remote
 * Attempt to pull any changes from the remote
   * This will only be successful if the student has NOT updated their
-	submission (i.e., there was nothing to push).
-	Otherwise nothing will be pulled.
+    submission (i.e., there was nothing to push).
+    Otherwise nothing will be pulled.
   * Any changes that are pulled will be changes the grader made to the
-	assignment
+    assignment
 
 Notes on scoring:
 
@@ -248,8 +248,8 @@ gradescope, during the "Autograder Configuration" step.
   or `git checkout -b` command, and numerous online tutorials about
   creating a new branch in git) for each assignment on gradescope
     * I originally made the mistake of keeping a separate copy of the
-	  entire autograder in a new directory for each assignment,
-	  which quickly turned into a mess when it came to keeping track of which
-	  changes were made to which assignment's autograder copy.  Git branches
-	  are designed precisely to make this sort of thing much less painless
+      entire autograder in a new directory for each assignment,
+      which quickly turned into a mess when it came to keeping track of which
+      changes were made to which assignment's autograder copy.  Git branches
+      are designed precisely to make this sort of thing much less painless
 
