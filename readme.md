@@ -248,14 +248,24 @@ Then clone this repository and add to the `tests` directory acording to your
 needs.
 Any files of the form `tests/test*.py` will be searched for unit tests.
 
-This entire project directory is intended to be zipped and uploaded to
+Modify `required_files.txt` to list the names of files
+you expect in students' submissions.
+
+**Important:**
+Before zipping, be sure to either `git commit` all your changes
+or remove the `git reset --hard` line from `update.sh`.
+(See the `pull-from-git` section above for more details.)
+
+Finally, zip the contents of this directory and upload it to
 gradescope, during the "Autograder Configuration" step.
 
 ### Usage suggestions
 
-* I strongly recommend creating a separate branch (see the `git branch`
-  or `git checkout -b` command, and numerous online tutorials about
-  creating a new branch in git) for each assignment on gradescope
+* I strongly recommend creating a separate branch
+  for each assignment on gradescope
+    * Use the `git branch` or `git checkout -b` command,
+      or see one of the numerous online tutorials
+      about creating a new branch in git
     * I originally made the mistake of keeping a separate copy of the
       entire autograder in a new directory for each assignment,
       which quickly turned into a mess when it came to keeping track of which
