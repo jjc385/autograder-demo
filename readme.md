@@ -6,13 +6,14 @@ I (Jared Claypooole) created this repository
 to rebuild and document the enhancements
 I made to [Gradescope][gradescope.com]'s
 example [python autograder][gs-py-autograder] implemenation.
-See also Gradescope's [autograder documentation][gs-autograder-docs].
 
 I made these changes in their original form
 to fit the needs of our course
 while working as a teaching assistant
 for UCLA's Physics 180N course (Computational Physics Lab),
 supervised by the course instructor Josh Samani.
+
+See also Gradescope's [autograder documentation][gs-autograder-docs].
 
 [gradescope.com]: https://www.gradescope.com/
 [gs-autograder-docs]: https://gradescope-autograders.readthedocs.io/en/latest/
