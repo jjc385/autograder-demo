@@ -20,14 +20,14 @@ supervised by the course instructor Josh Samani.
 
 ### Development notes
 
-I originally made these modifications in a fairly "quick and dirty" manner,
+I originally made these enhancements in a fairly "quick and dirty" manner,
 with a lot of things I've since decided to clean up.
 I also need to keep private the exact tests we developed
 to (partially) grade students' code,
 so that these may be reused in future iterations of the course.
 
 As such, I've created this separate public demo,
-so that others may adapt my autograder improvements to their courses.
+so that others may adapt my autograder enhancements to their courses.
 I've attempted to use the following principles to improve the quality of the
 project:
 
@@ -41,7 +41,7 @@ project:
 
 ## Project progress
 
-My original modifications included 5 major changes:
+My original changes included five major enhancements:
 
 * pull-from-git
   * Allow updates to the autograder to be dynamically pulled via git
@@ -55,7 +55,7 @@ My original modifications included 5 major changes:
   * Create a framework for grader to incrementally correct students' code using git,
     preventing minor mistakes from disproportionately affecting grades
 
-So far, the first two changes have been merged into this project,
+So far, the first two enhancements have been merged into this project,
 and the remaining are in development
 (likely with some code being pushed on branches on this repo,
 or even with open pull requests).
