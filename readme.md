@@ -263,12 +263,12 @@ gradescope, during the "Autograder Configuration" step.
 
 * I strongly recommend creating a separate branch
   for each assignment on gradescope
-    * Use the `git branch` or `git checkout -b` command,
-      or see one of the numerous online tutorials
-      about creating a new branch in git
-    * I originally made the mistake of keeping a separate copy of the
-      entire autograder in a new directory for each assignment,
-      which quickly turned into a mess when it came to keeping track of which
-      changes were made to which assignment's autograder copy.  Git branches
-      are designed precisely to make this sort of thing much less painless
+  * Use the `git branch` or `git checkout -b` command,
+    or see one of the numerous online tutorials
+    about creating a new branch in git
+  * I originally made the mistake of keeping a separate copy of the
+    entire autograder in a new directory for each assignment,
+    which quickly turned into a mess when it came to keeping track of which
+    changes were made to which assignment's autograder copy.  Git branches
+    are designed precisely to make this sort of thing much less painless
 
