@@ -2,3 +2,4 @@ subprocess32
 gradescope-utils 
 parameterized
 multiprocess
+numpy

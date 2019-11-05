@@ -1,6 +1,18 @@
 {
     "tests": [
         {
+            "name": "test_return_integer (test_fcnTestDemo.TestModule)",
+            "score": 2.5,
+            "max_score": 2.5,
+            "output": "fetching output from test:\nTest succeeded -- name:  return_integer\nx:  (1, 1)\nfx:  2\nTest succeeded -- name:  return_integer\nx:  (0, 0)\nfx:  0\nTest succeeded -- name:  return_integer\nx:  (3,)\nfx:  5\n\nint score:  3 out of 3\nfinal score:  2.5\n"
+        },
+        {
+            "name": "test_return_integer_list (test_fcnTestDemo.TestModule)",
+            "score": 2.5,
+            "max_score": 2.5,
+            "output": "fetching output from test:\nTest succeeded -- name:  return_integer_list\nx:  (1, 1)\nfx:  [1, 1]\nTest succeeded -- name:  return_integer_list\nx:  (0, 0)\nfx:  [0, 0]\nTest succeeded -- name:  return_integer_list\nx:  (3,)\nfx:  [3, 2]\n\nint score:  3 out of 3\nfinal score:  2.5\n"
+        },
+        {
             "name": "test_file_existence_0_sample_module_py (test_file_existence.TestFileExistence)",
             "score": 0.01,
             "max_score": 0.01,
@@ -15,5 +27,5 @@
     ],
     "leaderboard": [],
     "execution_time": "0.00",
-    "score": 0.02
+    "score": 5.02
 }
