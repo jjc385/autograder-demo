@@ -40,10 +40,17 @@ mkdir results
 ./run_autograder 
 
 # Print the autograder results for easy inspection
+echo "[Printing results.json]"
 cat results/results.json
+echo " "
+echo "[Pretty printing test results]"
+python3 source/metatests/print-json-results.py results/results.json
+echo " "
+echo " "
 
 # Compare the results against the expected results
 #	* Will return nonzero if the results differ
+echo "[Compare against expected results.json]"
 python3 source/metatests/compare_autograder_results.py \
 	results/results.json \
 	"$source_dir/results_expected.json"
