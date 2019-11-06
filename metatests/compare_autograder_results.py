@@ -28,9 +28,9 @@ def compare_autograder_results(fname_actual, fname_expected):
     for testDict_expected, testDict_actual in zip(expected["tests"], actual["tests"]):
         for key in testDict_expected:
             if testDict_actual[key] != testDict_expected[key]:
-                print("Mismatch in key {} "
-                        "between expected test {} "
-                        "and actual test {}"
+                print("Mismatch in key {}\n"
+                        "\tbetween expected test {}\n"
+                        "\tand actual test {}\n"
                         .format(key, testDict_expected, testDict_actual)
                     )
                 diff_count += 1
