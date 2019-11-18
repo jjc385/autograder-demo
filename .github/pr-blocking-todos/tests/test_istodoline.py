@@ -1,8 +1,8 @@
-from checkfortodos import checkForTodos, isTodoLine
+from checkfortodos import isTodoLine
 
 import unittest
 
-class TestCheckForTodos(unittest.TestCase):
+class TestIsTodoLine(unittest.TestCase):
 
     def test_isTodoLine_yesAndNo(self):
 
