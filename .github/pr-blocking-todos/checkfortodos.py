@@ -75,7 +75,7 @@ if __name__ == '__main__':
         fnameToCheck = sys.argv[1]
     else:
         print("Expected one argument -- path to the file to check for TODOs")
-        exit(2)
+        exit(3)
 
     statusCode = checkForTodos(fnameToCheck)
     if statusCode == 1:
