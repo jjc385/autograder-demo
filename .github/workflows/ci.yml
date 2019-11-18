@@ -3,13 +3,14 @@ name: pr-blocking-todos-CI
 on: [push]
 
 jobs:
-  env:
-    LOCAL_BIN_PATH: .github/pr-blocking-todos
-    SCRIPT_NAME: checkfortodos.py
-    TODOS_FNAME: .pr-blocking-todos.md
 
   test:
     runs-on: ubuntu-latest
+
+    env:
+      LOCAL_BIN_PATH: .github/pr-blocking-todos
+      SCRIPT_NAME: checkfortodos.py
+      TODOS_FNAME: .pr-blocking-todos.md
 
     steps:
       - uses: actions/checkout@v1
