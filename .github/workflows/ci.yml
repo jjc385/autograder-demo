@@ -3,6 +3,10 @@ name: pr-blocking-todos-CI
 on: [push]
 
 jobs:
+  env:
+    LOCAL_BIN_PATH: .github/pr-blocking-todos
+    SCRIPT_NAME: checkfortodos.py
+    TODOS_FNAME: .pr-blocking-todos.md
 
   test:
     runs-on: ubuntu-latest
@@ -17,10 +21,14 @@ jobs:
         with:
           python-version: 3.7
 
-      - name: Check for PR-blocking TODOs
+      - name: Unit tests for PR-blocking TODOs
         env:
-          ACTION_PATH: .github/pr-blocking-todos
-          TODOS_FNAME: .pr-blocking-todos.md
+            TEST_DIR_NAME: tests
         run: |
-          python3 "$ACTION_PATH/checkfortodos.py" "$TODOS_FNAME"
+          cd "$LOCAL_BIN_PATH"
+          python3 -m unittest discover -v -s "$TEST_DIR_NAME"
+
+      - name: Check for PR-blocking TODOs
+        run: |
+          python3 "$LOCAL_BIN_PATH/$SCRIPT_NAME" "$TODOS_FNAME"
 
