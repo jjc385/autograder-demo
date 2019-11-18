@@ -1,9 +1,29 @@
 import sys
 
+def isTodoLine(line):
+    """Check whether the given line (a string) is considered a TODO line
+
+    TODO lines are formatted like top-level markdown bullet points
+    
+    * Starts with `*`
+    * No white space before the first character
+    """
+
+    if not isinstance(line, str):
+        return False
+    if len(line) < 0:
+        return False
+    firstChar = line[0]
+    if firstChar == '*':
+        return True
+    return False
+
+
 def checkForTodos(fnameToCheck):
     """Check for file containing todos
 
     If there are TODOs found, print them
+    See documentation for `isTodoLine` for which lines are considered todos
 
     Return the exit code to return to the shell
 
@@ -24,7 +44,7 @@ def checkForTodos(fnameToCheck):
         ## attempt to open file
         with open(fnameToCheck, 'r') as f:
             for line in f:
-                if len(line) > 0 and line[0] == '*':
+                if isTodoLine(line):
                     ## TODOs have been found
                     return 1
 
