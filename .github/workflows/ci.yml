@@ -1,10 +1,10 @@
-name: pr-blocking-todos-CI
+name: CI
 
 on: [push]
 
 jobs:
 
-  test:
+  pr-blocking-todos:
     runs-on: ubuntu-latest
 
     env:
