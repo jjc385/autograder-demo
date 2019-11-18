@@ -1,0 +1,26 @@
+name: CI
+
+on: [push]
+
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+
+      - name: Check for PR-blocking TODOs
+        env:
+          ACTION_PATH: .github/pr-blocking-todos
+          TODOS_FNAME: .pr-blocking-todos.md
+        run: |
+          python3 "$ACTION_PATH/checkfortodos.py" "$TODOS_FNAME"
+
