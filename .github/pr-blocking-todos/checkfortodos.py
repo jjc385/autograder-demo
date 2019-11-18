@@ -5,18 +5,31 @@ def isTodoLine(line):
 
     TODO lines are formatted like top-level markdown bullet points
     
-    * Starts with `*`
+    * Starts with `*` or `-`
+    * Doesn't have ` [x]` or ` [X]` as the following chars
     * No white space before the first character
     """
 
+    ## ensure line is a string
     if not isinstance(line, str):
         return False
-    if len(line) < 0:
+
+    ## check first character
+    if len(line) < 1:
         return False
     firstChar = line[0]
-    if firstChar == '*':
-        return True
-    return False
+    allowedStartingChars = {'*', '-'}
+    if firstChar not in allowedStartingChars:
+        return False
+
+    ## ensure following characters don't indicate a checked off list
+    if len(line) >= 5:
+        nextChars = line[1:5]
+        allowedNextChars = { ' [{}]'.format(x) for x in ('x', 'X') }
+        if nextChars in allowedNextChars:
+            return False
+
+    return True
 
 
 def checkForTodos(fnameToCheck):
